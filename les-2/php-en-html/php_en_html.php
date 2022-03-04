@@ -1,3 +1,13 @@
+<?php
+
+$title = "PHP en HTML combineren";
+$img = "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg";
+$imgtitle = "PHP Logo";
+$name = "Joeri Breedveld"
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,25 +17,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <h1><?php echo $title;?></h1>
+  <img src="<?php echo $img;?>" alt="<?php echo $imgtitle;?>">
+  <h2><?php echo $name;?></h1>
 </body>
 </html>
-
-<?php
-$date = date("l") . "<br>";
-print "YO MAN HET IS ".$date;
-if ($_POST['user']) {
-  print "Hallo, ";
-  print $_POST['user'];
-  print "!";
-}
-else {
-  print <<<_HTML_
-  <form method="post" action="$_SERVER[PHP_SELF]">
-  Naam: <input type="text" name="user" />
-  <br />
-  <input type="submit" value="enter" />
-  </form>
-  _HTML_;
-}
-?>
