@@ -6,9 +6,11 @@ $benzineprijs = 2.311;
 
 $tankinhoud = 50;
 
-$aantalkerentanken = round(($afstand / 15) / 50);
+$aantalkmvoortank = 15;
 
-$totalekosten = round(($afstand / 15) * $benzineprijs, 2);
+$aantalkerentanken = round(($afstand / $aantalkmvoortank) / $tankinhoud);
+
+$totalekosten = round(($afstand / $aantalkmvoortank) * $benzineprijs, 2);
 
 $treinkoste = 63;
 
